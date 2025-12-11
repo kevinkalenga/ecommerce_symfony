@@ -23,13 +23,7 @@ class RegisterUserType extends AbstractType
                     'placeholder' => "Indiquez votre adresse email"
                 ]
             ])
-            // ->add('password', PasswordType::class, [
-            //     'label' => "Votre mot de passe",
-            //      'attr' => [
-            //         'placeholder' => "Choisissez votre mot de passe"
-            //     ]
-            // ])
-            ->add('plainPassword', PasswordType::class, [
+            ->add('plainPassword',  RepeatedType::class, [
                 'type' => PasswordType::class,
                 'first_options'  => [
                     'label' => 'Votre mot de passe',
